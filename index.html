@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sua Segurança Digital - Guia Fácil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Alerta Visual para Emergência -->
+  <div id="visual-alert" class="visual-alert-banner" role="alert" aria-live="assertive" hidden>
+    ⚠️ ATENÇÃO: Chamada de emergência iniciada!
+  </div>
+
+  <!-- Barra de Acessibilidade Superior -->
+  <div class="accessibility-bar" role="region" aria-label="Controles de Acessibilidade">
+    <button onclick="changeFontSize(0.1)">A+ Aumentar Texto</button>
+    <button onclick="changeFontSize(-0.1)">A- Diminuir Texto</button>
+    <button onclick="toggleContrast()">Alto Contraste</button>
+    <button onclick="readPageContent()">🔊 Ler Tudo</button>
+    <button onclick="stopSpeech()">⏹️ Parar Voz</button>
+  </div>
+
+  <header>
+    <h1>Segurança Digital Fácil</h1>
+    <p>Dicas simples para navegar na internet sem medo e de forma segura.</p>
+  </header>
+
+  <main id="main-content" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+    <section class="card" id="card-1">
+      <h2>1. Cuidado com Links Estranhos</h2>
+      <p>Nunca clique em links enviados por mensagens de pessoas desconhecidas no WhatsApp ou no e-mail. Bancos e lojas não pedem senhas pelo WhatsApp.</p>
+      <button class="btn-action-card" onclick="readCard('card-1')">🔊 Ouvir esta dica</button>
+    </section>
+
+    <section class="card" id="card-2">
+      <h2>2. Crie Senhas Fortes</h2>
+      <p>Evite usar datas de nascimento ou nomes de familiares. Misture letras, números e símbolos simples. Guarde suas senhas em um caderno em local seguro.</p>
+      <button class="btn-action-card" onclick="readCard('card-2')">🔊 Ouvir esta dica</button>
+    </section>
+
+    <section class="card" id="card-3">
+      <h2>3. Desconfie de Ofertas Exageradas</h2>
+      <p>Se um produto estiver muito barato ou prometendo dinheiro fácil, pode ser um golpe. Peça ajuda a um familiar antes de realizar qualquer compra online.</p>
+      <button class="btn-action-card" onclick="readCard('card-3')">🔊 Ouvir esta dica</button>
+    </section>
+
+    <section class="emergency-box" id="card-emergency">
+      <h2>Precisa de Ajuda Imediata?</h2>
+      <p>Se você suspeitar de um crime ou emergência, acione a Polícia Militar:</p>
+      <a href="tel:190" class="btn-emergency" onclick="triggerVisualAlert()">🚨 LIGAR 190</a>
+      <div style="margin-top: 15px;">
+        <button class="btn-action-card" onclick="readCard('card-emergency')">🔊 Ouvir emergência</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- INTÉRPRETE 3D DE LIBRAS ANIMADO (VLIBRAS) -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
